@@ -1,0 +1,16 @@
+C:\Repo\NETCORE\Konsol\OrderProcessing\bin\Debug\net11.0\OrderProcessing.exe
+C:\Repo\NETCORE\Konsol\OrderProcessing\bin\Debug\net11.0\OrderProcessing.deps.json
+C:\Repo\NETCORE\Konsol\OrderProcessing\bin\Debug\net11.0\OrderProcessing.runtimeconfig.json
+C:\Repo\NETCORE\Konsol\OrderProcessing\bin\Debug\net11.0\OrderProcessing.runtimeconfig.dev.json
+C:\Repo\NETCORE\Konsol\OrderProcessing\bin\Debug\net11.0\OrderProcessing.dll
+C:\Repo\NETCORE\Konsol\OrderProcessing\bin\Debug\net11.0\OrderProcessing.pdb
+C:\Repo\NETCORE\Konsol\OrderProcessing\obj\Debug\net11.0\OrderProcessing.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repo\NETCORE\Konsol\OrderProcessing\obj\Debug\net11.0\OrderProcessing.AssemblyInfoInputs.cache
+C:\Repo\NETCORE\Konsol\OrderProcessing\obj\Debug\net11.0\OrderProcessing.AssemblyInfo.cs
+C:\Repo\NETCORE\Konsol\OrderProcessing\obj\Debug\net11.0\OrderProcessing.csproj.CoreCompileInputs.cache
+C:\Repo\NETCORE\Konsol\OrderProcessing\obj\Debug\net11.0\OrderProcessing.dll
+C:\Repo\NETCORE\Konsol\OrderProcessing\obj\Debug\net11.0\refint\OrderProcessing.dll
+C:\Repo\NETCORE\Konsol\OrderProcessing\obj\Debug\net11.0\OrderProcessing.pdb
+C:\Repo\NETCORE\Konsol\OrderProcessing\obj\Debug\net11.0\OrderProcessing.genruntimeconfig.cache
+C:\Repo\NETCORE\Konsol\OrderProcessing\obj\Debug\net11.0\ref\OrderProcessing.dll
+C:\Repo\NETCORE\Konsol\OrderProcessing\obj\Debug\net11.0\OrderPro.3C1BC4D2.Up2Date
