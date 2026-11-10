@@ -14,3 +14,4 @@ C:\Repo\NETCORE\Konsol\OrderProcessing\obj\Debug\net11.0\OrderProcessing.pdb
 C:\Repo\NETCORE\Konsol\OrderProcessing\obj\Debug\net11.0\OrderProcessing.genruntimeconfig.cache
 C:\Repo\NETCORE\Konsol\OrderProcessing\obj\Debug\net11.0\ref\OrderProcessing.dll
 C:\Repo\NETCORE\Konsol\OrderProcessing\obj\Debug\net11.0\OrderPro.3C1BC4D2.Up2Date
+C:\Repo\NETCORE\Konsol\OrderProcessing\obj\Debug\net11.0\OrderProcessing.sourcelink.json

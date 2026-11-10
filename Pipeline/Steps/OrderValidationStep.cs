@@ -10,7 +10,7 @@ public class OrderValidationStep : IPipelineStep
 
         if(order.Quantity<=0)
           throw new Exception("Geçersiz ürün miktari");
-        if(order.TotalAmount<=0)
+        if(order.Amount<=0)
           throw new Exception("Geçersiz sipariş tutari");
 
         Console.WriteLine("Sipariş doğrulandi");

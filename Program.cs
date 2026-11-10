@@ -1,4 +1,6 @@
 ﻿using Models;
+using OrderProcessing.Builders;
+using OrderProcessing.Handlers;
 using Pipeline;
 using Pipeline.Steps;
 
@@ -21,15 +23,35 @@ internal class Program
     /// <param name="args"></param>
     private static async Task Main(string[] args)
     {
+       /*var order = new Order
+       {
+           Id = 1001,
+           CustomerName = "Ahmet",
+           ProductName = "Laptop",
+           Quantity = 2,
+           Amount = 50000,
+           Address = "Ankara",
+           ShippingMethod = "EXPRESS",
+           PaymentMethod = "CREDIT_CARD"
+       };*/
+
+       var order = new OrderBuilder()
+                    .SetCustomer("Volkan")
+                    .SetProduct("Laptop",2,50000)
+                    .SetAddress("Ankara")
+                    .SetShippingMethod("EXPRESSS")
+                    .SetPaymentMethod("CREDIT_CARD")
+                    .SetShippingMethod("NORMAL")
+                    .Build(); 
+         
+
+        var blacklist=new BlacklistHandler();
+        blacklist
+           .SetNext(new AmountHandler())
+           .SetNext(new ProductHandler());
+
         
-        var order =new Order
-        {
-            Id = 1001,
-            CustomerName = "Ahmet",
-            ProductName = "Laptop",
-            Quantity = 2,
-            TotalAmount = 50000
-        };
+
 
         var pipeline = new OrderPipeline()
                           .AddStep(new OrderValidationStep())
