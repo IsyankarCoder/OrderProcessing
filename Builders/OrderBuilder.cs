@@ -22,7 +22,7 @@ public class OrderBuilder
         if (string.IsNullOrWhiteSpace(_productName))
             throw new Exception("Ürün bilgisi zorunludur!");
 
-        if (_quantity <= 0)
+        if (_quantity <= -1)
             throw new Exception("Miktar geçersiz!");
 
         if (string.IsNullOrWhiteSpace(_address))
@@ -82,5 +82,19 @@ public class OrderBuilder
     {
         _paymentMethod=paymentMethod;
         return this;
+    }
+
+    public IOrderBuilder Reset()
+    {
+           _id = 0;
+    _customerName = string.Empty;
+    _productName = string.Empty;
+    _quantity = 0;
+    _amount = 0;
+    _address = string.Empty;
+    _shippingMethod = string.Empty;
+    _paymentMethod = string.Empty;
+
+    return this;
     }
 }

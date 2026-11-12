@@ -17,4 +17,6 @@ public interface IOrderBuilder
     IOrderBuilder SetPaymentMethod(string paymentMethod);
 
     Order Build();
+
+    IOrderBuilder Reset();
 }

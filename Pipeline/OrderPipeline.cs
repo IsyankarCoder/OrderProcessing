@@ -1,4 +1,5 @@
 using Models;
+using OrderProcessing.Helpers;
 
 
 namespace Pipeline
@@ -14,12 +15,20 @@ namespace Pipeline
 
         }
 
-        public async Task ExecuteAsync(Order order)
+        public async Task<IReadOnlyList<OrderResult>>  ExecuteAsync(Order order)
         {
+              var results = new List<OrderResult>();
+              
             foreach (var step in _steps)
             {
-                await step.ExecuteAsync(order);
-            }
+                var result= await step.ExecuteAsync(order);
+
+                 results.Add(result);
+
+            if (result is not OrderSuccess && !step.ContinueOnFailure)
+                break;
+            } 
+            return results; 
         }
     }
 }

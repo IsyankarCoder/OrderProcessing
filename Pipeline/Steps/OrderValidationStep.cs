@@ -1,20 +1,22 @@
 using Models;
+using OrderProcessing.Helpers;
 
 namespace Pipeline.Steps;
 
 public class OrderValidationStep : IPipelineStep
 {
-    public Task ExecuteAsync(Order order)
+    public bool ContinueOnFailure => false;
+    public async Task<OrderResult> ExecuteAsync(Order order)
     {
         Console.WriteLine("1. Sipariş doğrulaniyor....");
 
         if(order.Quantity<=0)
-          throw new Exception("Geçersiz ürün miktari");
+           return  new ValidationError("Geçersiz ürün miktari");
         if(order.Amount<=0)
-          throw new Exception("Geçersiz sipariş tutari");
+          return new ValidationError("Geçersiz sipariş tutari");
 
         Console.WriteLine("Sipariş doğrulandi");
 
-        return Task.CompletedTask;
+        return new OrderSuccess(order.Id);
     }
 }

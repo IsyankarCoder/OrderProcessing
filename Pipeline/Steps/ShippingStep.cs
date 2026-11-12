@@ -1,16 +1,18 @@
 using Models;
+using OrderProcessing.Helpers;
 
 namespace Pipeline.Steps
 {
     public class ShippingStep : IPipelineStep
     {
-        public Task ExecuteAsync(Order order)
+        public bool ContinueOnFailure => false;
+        public async Task<OrderResult> ExecuteAsync(Order order)
         {
            Console.WriteLine("4. Kargo oluşturuluyor...");
 
             if (!order.IsPaid)
             {
-                throw new Exception("Ödeme yapilmadan kargo oluşturulmaz ");
+              return  new ShippingError("Ödeme yapilmadan kargo oluşturulmaz ");
 
             }
 
@@ -18,7 +20,7 @@ namespace Pipeline.Steps
 
             Console.WriteLine("Kargo oluşturuldu...");
 
-            return Task.CompletedTask;
+            return  new OrderSuccess(order.Id);
         }
     }
 }

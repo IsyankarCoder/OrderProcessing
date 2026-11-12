@@ -1,16 +1,18 @@
 using Models;
+using OrderProcessing.Helpers;
 
 namespace Pipeline.Steps
 {
     public class StockStep : IPipelineStep
     {
-        public Task ExecuteAsync(Order order)
+        public bool ContinueOnFailure => false;
+        public async Task<OrderResult> ExecuteAsync(Order order)
         {
             Console.WriteLine("3. Stok güncelleniyor...");
 
             Console.WriteLine($"{order.ProductName} stoktan düşüldü : {order.Quantity}");
 
-            return Task.CompletedTask;
+            return  new OrderSuccess(order.Id);
         }
     }
 }
